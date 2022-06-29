@@ -1,0 +1,230 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Varibles */
+:root {
+    --main-color: #10cab7;
+}
+.header {
+    padding: 20px;
+}
+.header img{
+    width: 60px;
+    height: 24px;
+}
+.contenr {
+
+    margin: auto;
+}
+.header .contenr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header .contenr .links:hover .icons span:nth-child(2) {
+    width: 100%;
+}
+.contenr .links {
+    position: relative;
+}
+.contenr .links .icons {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+   
+}
+.contenr .links .icons span {
+   background-color: #333;
+   margin-bottom: 5px;
+}
+.contenr .links .icons span:first-child {
+  height: 3px;
+  width: 100%;
+}
+.contenr .links .icons span:nth-child(2) {
+   height: 3px;
+   width: 20%;
+   transition: 0.9s;
+  
+}
+.contenr .links .icons span:last-child {
+  height: 3px;
+  width: 100%;
+}
+
+.header .links ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    display: none;
+    transition: 1s;
+    top: calc(100% + 22px);
+    z-index: 1;
+}
+.header .links ul::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent #eee transparent;
+    top: -20px;
+    right: 5px;
+}
+
+.header .links:hover ul {
+    display: block;
+    z-index: 100;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    transition: 0.5s ease;
+    text-decoration: none;
+    color: black;
+}
+.header .links ul li a:hover {
+   padding-left: 20px;
+    border-left: 2px solid black;
+    outline: none;
+    color: rgb(0, 255, 149);
+}
+.header .links ul li:not(last-child) a {
+    border-bottom: 3px solid #eee;
+}
+
+.landing {
+    background-image: url("../img/landing.jpg");
+    background-size: cover;
+    z-index: -2;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+.landing .intro-text h1 {
+    margin: 0;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+.landing .intro-text p {
+    line-height: 1.8;
+    margin-top: 10px;
+    margin-left: 3px;
+    font-size: 19px;
+    margin: 0;
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* text-align: center; */
+    transform: translate(-50%,-50%);
+    width: 320px;
+    max-width: 100%;
+    margin: 0;
+}
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.features .contenr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 50px;
+}
+.features .contenr .feet {
+    padding: 20px;
+    text-align: center;
+}
+.features .contenr .feet i {
+    margin-bottom: 20px;
+    color: var(--main-color);
+    font-size: 50px;
+}
+.features .contenr .feet h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+.features .contenr .feet p {
+ line-height: 1.6;
+ color: #777;
+ font-size: 17px;
+}
+
+.Services .contenr h1 {
+    font-size: 80px;
+    opacity: 0.1;
+    font-weight: bold;
+    text-align: center;
+}
+.Services .contenr  p {
+    margin-top: -80px;
+    font-size: 17px;
+    color: #777;
+    opacity: 0.9;
+    text-align: center;
+}
+
+
+
+/* 
+.features .contenr {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #eee;
+    padding: 20px;
+    width: 100%;
+}
+.features .contenr .feet {
+    padding: 1px;
+    width: 300px;
+
+}
+.features .contenr .feet i {
+    font-size: 50px;
+    color: var(--main-color);
+
+    right :-150px;
+    margin-bottom: 30px;
+
+} */
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media (min-width: 768px) {
+    .contenr {
+      width:  750px;
+    }
+}
+
+@media  (min-width: 992px) {
+    .contenr {
+        width: 970px;
+    }
+}
+
+@media   (min-width: 1200px) {
+    .contenr {
+       width: 1170px;
+    }
+}
+
+
